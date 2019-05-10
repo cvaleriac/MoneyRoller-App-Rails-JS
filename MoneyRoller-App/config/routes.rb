@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   get '/rollovers/incoming/:id/edit' => 'rollovers#edit', as: :editincoming
   get '/rollovers/outgoing/:id/edit' => 'rollovers#edit', as: :editoutgoing
   get '/auth/facebook/callback' => 'sessions#fbcreate'
-  
+  get '/rollovers/incoming' => 'rollovers#incoming'
+  get '/rollovers/outgoing' => 'rollovers#outgoing'
+
 
   resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create, :destroy]

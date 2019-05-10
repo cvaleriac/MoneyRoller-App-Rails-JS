@@ -18,12 +18,12 @@ class RolloversController < ApplicationController
     end
 
   def incoming
-    @rollover = Rollover.find_by(id: params[:id])
+   @rollovers = Rollover.incoming
   end
 
     
   def outgoing
-    @rollover = Rollover.find_by(id: params[:id])
+    @rollover = Rollover.outgoing
   end
 
 
