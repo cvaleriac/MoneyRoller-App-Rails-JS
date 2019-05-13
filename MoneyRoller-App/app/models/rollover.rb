@@ -12,6 +12,6 @@ class Rollover < ActiveRecord::Base
     scope :by_user, -> (current_user) {where('user_id = ?', current_user.id)}   
     
     #scope :incoming, -> {where(:rollover_type => 'incoming')}
-    scope :outgoing, -> {where(:rollover_type => 'outgoing')}
+    scope :outgoing, -> {where(:rollover_type => 'Outgoing')}
     scope :incoming, -> {where(rollover_type: "Incoming")}
 end

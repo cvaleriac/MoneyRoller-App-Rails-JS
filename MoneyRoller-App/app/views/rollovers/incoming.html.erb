@@ -4,10 +4,11 @@
 
 <% @rollovers.each do |rollover| %>
   <ul>
-  <li><p>Amount:<%= rollover.amount%></p></li>
-    <p>Destination: <%= rollover.institution.name %></p>
+  <li><p><%= link_to rollover.amount, rollover_path(rollover.id)%><p></li>
   </ul>
   <%end%>
+
+<button class="btn btn-outline-primary"><%= link_to "Back", rollovers_path(@rollover)%></button></p>
 
 </section>
  

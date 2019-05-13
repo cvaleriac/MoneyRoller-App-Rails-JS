@@ -28,7 +28,7 @@ Rails.application.routes.draw do
     resources :rollovers, only: [:incoming, :outgoing, :index, :new, :edit]
   end
  
-  resources :rollovers, only: [:index, :incoming, :outgoing, :new, :create, :edit, :update]
+  resources :rollovers, only: [:index, :incoming, :outgoing, :show, :new, :create, :edit, :update]
  
   root 'welcome#index'
 end
