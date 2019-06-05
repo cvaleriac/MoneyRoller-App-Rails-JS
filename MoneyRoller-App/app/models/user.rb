@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   validates :username, :uniqueness => { case_sensitive: false }
   validates :email, presence: true
   
+  scope :most_rollovers, -> { all.order(rollover: :DESC).limit(1).first }
+
 
 
 end

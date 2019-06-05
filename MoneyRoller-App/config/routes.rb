@@ -16,9 +16,11 @@ Rails.application.routes.draw do
   get '/auth/facebook/callback' => 'sessions#fbcreate'
   get '/rollovers/incoming' => 'rollovers#incoming'
   get '/rollovers/outgoing' => 'rollovers#outgoing'
+  
+  
+  get 'users/most_rollovers' => 'users#most_rollovers'
 
-
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :index]
   resources :sessions, only: [:new, :create, :destroy]
   resources :institutions
   resources :rollovers, only: [:new, :create, :edit, :destroy]

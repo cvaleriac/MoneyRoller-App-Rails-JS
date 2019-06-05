@@ -14,4 +14,6 @@ class Rollover < ActiveRecord::Base
     #scope :incoming, -> {where(:rollover_type => 'incoming')}
     scope :outgoing, -> {where(:rollover_type => 'Outgoing')}
     scope :incoming, -> {where(rollover_type: "Incoming")}
+
+
 end
